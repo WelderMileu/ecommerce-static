@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart animated</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- menu de navegação  -->
+    <nav class="navigator">
+        <div class="cart">
+            <p id="quant">0</p>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
+
+    <!-- modal de produtos  -->
+    <div class="modal">
+        <div class="modal__container">
+            <div class="modal__close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal__info">
+                <div>
+                    <div id="image__conteiner">
+                        <h1><img id="modal__image" src="" alt=""></h1>
+                    </div>
+                    <div class="modal__count">
+                        <p class="count__title">Quant: </p>
+                        <div class="count__length">
+                            <i class="fas fa-minus"></i>
+                            <p>1</p>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__description">
+                    <h1 id="modal__name"></h1>
+                    <ul class="modal__list"></ul>
+                    <div>
+                        <p class="modal__price"></p>
+                    </div>
+                    <div class="modal__pag">
+                        <p>Formatos de Pagamento</p>
+                        <ul>
+                            <li><i class="fab fa-cc-visa"></i></li>
+                            <li><i class="fab fa-cc-stripe"></i></li>
+                            <li><i class="fab fa-cc-paypal"></i></li>
+                            <li><i class="fab fa-cc-amex"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-onpress">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Lista de produtos -->
+    <div class="cart__list">
+    	<table>
+    		<tr>
+    			<th>Produto</th>
+    			<th>Quant</th>
+    			<th>Total</th>
+    		</tr>
+            <tbody class="cart__products"></tbody>
+    	</table>
+    	<div>
+    		<div class="total">
+    			<p>Total</p>
+    			<p class="number">R$ 00,00</p>
+    		</div>
+    		<button id="pagar" class="btn-onpress">
+    			Pagar
+    		</button>
+    	</div>
+    </div>
+
+    <!-- lista de produtos  -->
+    <div class="container">
+        <div class="wrap">
+            <div class="card" data-price="5000">
+                <div class="card__image">
+                    <h1>
+                        <img src="assets/img01.png" alt="notbook">
+                    </h1>
+                </div>
+                <div class="card__content">
+                    <h1>Notbook Samsung</h1>
+                    <ul style="display: none;">
+                        <li>Processor Intel MD</li>
+                        <li>16 Gb de memoria ram</li>
+                        <li>2 tera de armazenameto</li>
+                    </ul>
+                </div>
+                <button class="btn-onpress">Visualizar</button>
+            </div>
+
+            <div class="card" data-price="8000">
+                <div class="card__image">
+                    <h1>
+                        <img src="assets/img02.png" alt="notbook">
+                    </h1>
+                </div>
+                <div class="card__content">
+                    <h1>Notbook HP Pavilion</h1>
+                    <ul style="display: none;">
+                        <li>Processor Intel 10</li>
+                        <li>8 Gb de memoria ram</li>
+                        <li>5 tera de armazenameto</li>
+                    </ul>
+                </div>
+                <button class="btn-onpress">Visualizar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
